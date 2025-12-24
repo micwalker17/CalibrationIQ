@@ -1,0 +1,12 @@
+# Core Libraries
+pandas
+requests
+
+# PySpark is required for the main notebook logic.
+# It's often provided by the environment (like Databricks) but listed here for clarity.
+pyspark
+
+# Development & Testing
+pytest
+black
+flake8
