@@ -31,10 +31,12 @@ jobs:
       run: |
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
 
-    - name: Check formatting with Black
+    - name: Format code with Black (auto-fix)
       run: |
-         black . || true
+        black . || true
 
     - name: Run unit tests with pytest
       run: |
-        pytest -v
+        PYTHONPATH=. pytest -v
+      env:
+        PYTHONPATH: ${{ github.workspace }}
