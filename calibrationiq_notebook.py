@@ -1,3 +1,5 @@
+"""CalibrationIQ: OOT Analysis Pipeline - Portfolio Version"""
+
 # ============================================================================
 # Block 1: Configuration and Setup
 # Purpose: Imports libraries, sets up configuration, and defines placeholders
@@ -100,7 +102,15 @@ print("\nBLOCK 4: DEVIATION CALCULATION & VALIDATION")
 
 
 def calculate_deviation(measured, nominal):
-    """Calculates the tool's deviation: Deviation = Measured - Nominal."""
+    """Calculates the tool's deviation: Deviation = Measured - Nominal.
+
+    Args:
+        measured: The measured value from the calibration certificate
+        nominal: The target/nominal value
+
+    Returns:
+        float: The deviation (measured - nominal)
+    """
     return float(Decimal(str(measured)) - Decimal(str(nominal)))
 
 
@@ -312,4 +322,3 @@ else:
     print("   -> Next step: post 'All Clear' comment to Jira and close ticket.")
 
 print("\n✅ Notebook execution finished.")
-
